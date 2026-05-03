@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+/* ==================== MEDIEVAL THEME - AGE OF EMPIRES II ==================== */
+:root {
+  /* Gold Colors */
+  --gold: #c8a84b;
+  --gold-light: #e8c76a;
+  --gold-dark: #8a6f2e;
+  
+  /* Bronze & Earth */
+  --bronze: #7a4a1a;
+  
+  /* Background Colors */
+  --bg-dark: #0d0800;
+  --bg-panel: #1a1000;
+  --bg-card: #221500;
+  
+  /* Text Colors */
+  --text-cream: #f5e6c8;
+  --text-muted: #a89060;
+  
+  /* Border */
+  --border-gold: rgba(200, 168, 75, 0.4);
+}
+
+/* ==================== BASE STYLES ==================== */
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-dark);
+  background-image:
+    radial-gradient(ellipse at top, rgba(90, 55, 10, 0.3) 0%, transparent 60%),
+    radial-gradient(ellipse at bottom, rgba(40, 20, 0, 0.5) 0%, transparent 70%);
+  color: var(--text-cream);
+  font-family: 'Crimson Text', Georgia, serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==================== ANIMATIONS ==================== */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(200, 168, 75, 0.3),
+                0 4px 20px rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(200, 168, 75, 0.6),
+                0 8px 30px rgba(0, 0, 0, 0.8);
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.5) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -100%) scale(0.8) translateY(-40px);
+  }
+}

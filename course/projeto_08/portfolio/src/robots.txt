@@ -1,0 +1,19 @@
+# robots.txt - Search Engine Crawler Instructions
+# This file tells search engines how to crawl and index the site
+
+User-agent: *
+Allow: /
+Allow: /css/
+Allow: /js/
+Allow: /assets/
+
+# Disallow: /private/
+
+Sitemap: https://yoursite.com/sitemap.xml
+
+# Delay for aggressive crawlers (optional)
+# Crawl-delay: 1
+
+# Block specific crawlers if needed
+# User-agent: BadBot
+# Disallow: /

@@ -1,0 +1,34 @@
+version: 1
+
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - echo "Building portfolio site..."
+    build:
+      commands:
+        - echo "Static site - no build needed"
+
+  artifacts:
+    baseDirectory: src
+    files:
+      - '**/*'
+    discard-paths: no
+    
+  cache:
+    paths: []
+
+  env:
+    variables:
+      NODE_ENV: production
+
+redirects:
+  # SPA routing - redirect all HTML file not found requests to index.html
+  - source: '</^[^.]+$|\.(?!(js|css|gif|jpg|jpeg|png|txt|svg|woff|woff2|ttf|eot|otf|json)$)([^.]+$)/>'
+    status: 200
+    target: '/index.html'
+    
+  # Security: ensure HTTPS
+  - source: 'http://<*>'
+    status: 301
+    target: 'https://<*>'

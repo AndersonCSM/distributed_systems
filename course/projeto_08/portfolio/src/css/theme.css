@@ -1,0 +1,67 @@
+:root {
+  --gold: #c8a84b;
+  --gold-light: #e8c76a;
+  --gold-dark: #8a6f2e;
+  --bronze: #7a4a1a;
+  --bg-dark: #0d0800;
+  --bg-panel: #1a1000;
+  --bg-card: #221500;
+  --text-cream: #f5e6c8;
+  --text-muted: #a89060;
+  --border-gold: rgba(200, 168, 75, 0.4);
+
+  font-family: 'Crimson Text', Georgia, serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: var(--text-cream);
+  background-color: var(--bg-dark);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--bg-dark);
+  background-image:
+    radial-gradient(ellipse at top, rgba(90, 55, 10, 0.3) 0%, transparent 60%),
+    radial-gradient(ellipse at bottom, rgba(40, 20, 0, 0.5) 0%, transparent 70%);
+}
+
+a {
+  font-weight: 600;
+  color: var(--gold);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--gold-light);
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Cinzel', serif;
+  line-height: 1.2;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gold-dark);
+  border-radius: 4px;
+}

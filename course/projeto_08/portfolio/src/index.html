@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Anderson Carlos da Silva Morais - Engenheiro de Computação, especializado em desenvolvimento back-end, ciência de dados e soluções inovadoras.">
+    <meta name="keywords" content="engenheiro de computação, desenvolvedor python, data science, backend, portfolio, Anderson Carlos">
+    <meta name="author" content="Anderson Carlos da Silva Morais">
+    <meta name="theme-color" content="#c8a84b">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="language" content="Portuguese">
+    <meta property="og:title" content="Anderson Carlos da Silva Morais - Engenheiro de Computação">
+    <meta property="og:description" content="Engenheiro de Computação apaixonado por desenvolvimento back-end e ciência de dados. Explore meu portfólio.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/assets/images/2.jpg">
+    <meta property="og:url" content="https://portfolio.anderson.grupo5.sd.ufersa.dev.br">
+    <link rel="canonical" href="https://portfolio.anderson.grupo5.sd.ufersa.dev.br">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <title>Anderson Carlos da Silva Morais - Engenheiro de Computação | Portfolio</title>
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' font-weight='bold' fill='%23c8a84b'>&lt;/&gt;</text></svg>">
+</head>
+<body>
+    <!-- Navegação -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="logo" data-i18n="logo">Anderson Carlos da Silva Morais</a>
+            <div style="display: flex; gap: 2rem; align-items: center;">
+                <div class="language-selector">
+                    <button class="lang-btn" data-lang="pt" onclick="changeLanguage('pt')">PT</button>
+                    <button class="lang-btn" data-lang="en" onclick="changeLanguage('en')">EN</button>
+                    <button class="lang-btn" data-lang="zh" onclick="changeLanguage('zh')">中文</button>
+                </div>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#sobre" data-i18n="nav-sobre">Sobre</a></li>
+                <li><a href="#portfolio" data-i18n="nav-portfolio">Portfólio</a></li>
+                <li><a href="#habilidades" data-i18n="nav-habilidades">Habilidades</a></li>
+                <li><a href="#contato" data-i18n="nav-contato">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1 data-i18n="hero-title">Anderson Carlos da Silva Morais</h1>
+            <p class="subtitle" data-i18n="hero-subtitle">Engenheiro de Computação | Desenvolvedor Back-end | Apaixonado por Ciência de Dados e Soluções Inovadoras</p>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section class="about" id="sobre">
+        <div class="container">
+            <div style="display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 300px;">
+                    <h2 data-i18n="about-title">Sobre Mim</h2>
+                    <p data-i18n="about-p1">
+                        Sou graduando em <strong>Engenharia da Computação</strong> pela Universidade Federal Rural do Semi-Árido (UFERSA), com bacharelado em Ciência e Tecnologia. Apaixonado por tecnologia e soluções que busquem otimização e eficiência.
+                    </p>
+                    <p data-i18n="about-p2">
+                        Trabalho principalmente na área de <strong>desenvolvimento back-end</strong>, <strong>análise de dados</strong> e <strong>estruturas computacionais</strong>. Sou proativo, organizado e tenho facilidade de aprendizado. Busco constantemente aprimorar meus conhecimentos.
+                    </p>
+                    <p data-i18n="about-p3">
+                        Quando não estou trabalhando em projetos, estou na área de pesquisa científica, ou explorando novas tecnologias e métodos numéricos para engenharia.
+                    </p>
+                </div>
+                <div style="flex: 0 0 auto; margin-top: 1rem;">
+                    <img src="assets/images/2.jpg" alt="Anderson Carlos da Silva Morais" style="width: 200px; height: 200px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); object-fit: cover; object-position: center top;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfólio -->
+    <section class="projects" id="portfolio">
+        <div class="container">
+            <h2 data-i18n="portfolio-title">Portfólio</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #c8a84b 0%, #8a6f2e 100%); display: flex; align-items: center; justify-content: center; font-size: 60px;">🔬</div>
+                    <h3 data-i18n="project1-title">Pesquisa e Simulação Computacional</h3>
+                    <p data-i18n="project1-desc">Pesquisa e implementação de métodos numéricos para problemas em engenharia. Análise de dados de CO2 com dashboards.</p>
+                    <a href="https://github.com/AndersonCSM" class="project-link" data-i18n="project1-link">Ver Portfólio →</a>
+                </div>
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #e8c76a 0%, #c8a84b 100%); display: flex; align-items: center; justify-content: center; font-size: 60px;">📊</div>
+                    <h3 data-i18n="project2-title">Estágio - Business Intelligence</h3>
+                    <p data-i18n="project2-desc">Estagiário em Negócios na Klok tech. Análise de dados e ações de BI. Documentação de requisitos. Consultas PostgreSQL e suporte a clientes em ambiente B2B.</p>
+                    <a href="https://www.linkedin.com/in/andersoncarlos-/" class="project-link" data-i18n="project2-link">LinkedIn →</a>
+                </div>
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #8a6f2e 0%, #5a4420 100%); display: flex; align-items: center; justify-content: center; font-size: 60px;">🤖</div>
+                    <h3 data-i18n="project3-title">Professor em Robótica educacional</h3>
+                    <p data-i18n="project3-desc">Bolsista em Projeto de extensão. Ministrante de aulas de robótica para alunos do ensino básico e médio. Técnico em redes de computadores com ênfase em POO com Java.</p>
+                    <a href="https://github.com/AndersonCSM?tab=repositories" class="project-link" data-i18n="project3-link">Repositórios →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section class="skills" id="habilidades">
+        <div class="container">
+            <h2 data-i18n="skills-title">Habilidades</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3 data-i18n="skill1-title">Linguagens</h3>
+                    <p data-i18n="skill1-desc">Python 3, Java</p>
+                </div>
+                <div class="skill-card">
+                    <h3 data-i18n="skill2-title">Bancos de Dados</h3>
+                    <p data-i18n="skill2-desc">PostgreSQL, SQL</p>
+                </div>
+                <div class="skill-card">
+                    <h3 data-i18n="skill3-title">Data & BI</h3>
+                    <p data-i18n="skill3-desc">Looker Studio, Power BI, plotly, dash</p>
+                </div>
+                <div class="skill-card">
+                    <h3 data-i18n="skill4-title">Ferramentas & Soft Skills</h3>
+                    <p data-i18n="skill4-desc">Git, GitHub, Linux, Proatividade, Trabalho em Equipe, Liderança</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="contact" id="contato">
+        <div class="container">
+            <h2 data-i18n="contact-title">Entre em Contato</h2>
+            <p data-i18n="contact-subtitle">Interessado em colaborar ou conversar?</p>
+            <div class="contact-links">
+                <a href="mailto:andersoncarlos799@gmail.com" class="contact-link" data-i18n="contact-email">Email</a>
+                <a href="https://github.com/AndersonCSM" class="contact-link" data-i18n="contact-github">GitHub</a>
+                <a href="https://www.linkedin.com/in/andersoncarlos-/" class="contact-link" data-i18n="contact-linkedin">LinkedIn</a>
+                <a href="https://www.instagram.com/andersoncarlos___/" class="contact-link" data-i18n="contact-instagram">Instagram</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p data-i18n="footer">© 2026 Anderson Carlos da Silva Morais. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
