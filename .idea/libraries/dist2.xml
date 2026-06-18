@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="dist2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/course/projeto_02/dist.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

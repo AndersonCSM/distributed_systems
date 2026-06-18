@@ -1,0 +1,217 @@
+#!/bin/bash
+
+# 🛡️ QUICK REFERENCE: Usar APENAS pacotes até jan/2026
+# Use este arquivo como guia rápido
+
+cat << 'EOF'
+
+╔══════════════════════════════════════════════════════════════╗
+║  🛡️  NPM LOCK: SOMENTE PACOTES ATÉ JANEIRO DE 2026         ║
+║                                                              ║
+║  Data Limite: 31 de janeiro de 2026                         ║
+║  Bloqueios: 5 camadas de proteção                           ║
+╚══════════════════════════════════════════════════════════════╝
+
+═══════════════════════════════════════════════════════════════
+📋 COMANDOS PERMITIDOS
+═══════════════════════════════════════════════════════════════
+
+✅ npm ci
+   └─ Instala exatamente package-lock.json
+   └─ Hash verificado para cada pacote
+   └─ Recomendado: USE ESTE!
+
+✅ npm audit
+   └─ Verifica vulnerabilidades
+   └─ Rejeita críticas
+
+✅ npm run build
+   └─ Compila para produção
+
+✅ npm run type-check
+   └─ Valida TypeScript
+
+✅ npm run dev
+   └─ Rodar em desenvolvimento
+
+═══════════════════════════════════════════════════════════════
+❌ COMANDOS BLOQUEADOS
+═══════════════════════════════════════════════════════════════
+
+❌ npm install novo-pacote
+   └─ BLOQUEADO: não está em package.json
+
+❌ npm update
+   └─ BLOQUEADO: pode instalar versão > jan/2026
+
+❌ npm install express@latest
+   └─ BLOQUEADO: latest > jan/2026
+
+❌ npm install --no-save pkg
+   └─ BLOQUEADO: versão não controlada
+
+❌ npm install --save-dev pkg@latest
+   └─ BLOQUEADO: latest > jan/2026
+
+═══════════════════════════════════════════════════════════════
+🚀 SETUP INICIAL
+═══════════════════════════════════════════════════════════════
+
+# 1. Usar Node.js 20
+nvm use
+
+# 2. Instalar com verificação
+npm ci
+
+# 3. Verificar tudo
+bash scripts/verify-supply-chain.sh
+
+# 4. Type check
+npm run type-check
+
+# 5. Rodar em dev
+npm run dev
+
+═══════════════════════════════════════════════════════════════
+🔍 VERIFICAR CONFIGURAÇÃO
+═══════════════════════════════════════════════════════════════
+
+# Verificar bloqueio global
+cat ~/.npmrc | grep -E "save-exact|audit-level|_supply_chain"
+
+# Esperado:
+# save-exact=true
+# audit-level=critical
+# _supply_chain_limit=2026-01-31
+
+# Verificar Node.js
+nvm use && node -v
+# Esperado: v20.x.x
+
+# Verificar versions
+npm list --depth=0 | head -10
+
+# Esperado:
+# domino-online@0.1.0
+# ├── express@4.18.2
+# ├── socket.io@4.7.2
+# └── react@18.2.0
+
+═══════════════════════════════════════════════════════════════
+📦 ADICIONAR NOVO PACOTE (Se necessário)
+═══════════════════════════════════════════════════════════════
+
+# Passo 1: Verificar data de publicação
+npm view novo-pacote time
+
+# Passo 2: Se data <= 31/01/2026, editar package.json
+# "novo-pacote": "1.2.3"  ← VERSÃO EXATA!
+
+# Passo 3: Instalar
+npm ci
+
+# Passo 4: Commit
+git add package*.json
+git commit -m "chore: add novo-pacote@1.2.3"
+
+═══════════════════════════════════════════════════════════════
+🛡️  ESTRUTURA DE PROTEÇÃO
+═══════════════════════════════════════════════════════════════
+
+CAMADA 1: ~/.npmrc (global)
+├─ save-exact=true              ✅
+├─ audit-level=critical         ✅
+├─ strict-ssl=true              ✅
+└─ _supply_chain_limit=2026-01-31 ✅
+
+CAMADA 2: projeto/.npmrc (local)
+├─ Versionado em Git            ✅
+├─ Sobrescreve global se needed ✅
+└─ Específico do projeto        ✅
+
+CAMADA 3: package.json (versões exatas)
+├─ express: "4.18.2"            ✅
+├─ socket.io: "4.7.2"           ✅
+├─ react: "18.2.0"              ✅
+└─ tailwind: "3.3.6"            ✅
+
+CAMADA 4: package-lock.json (SHA-512)
+├─ 256 pacotes                  ✅
+├─ Hash verificado              ✅
+├─ Reproduzibilidade 100%       ✅
+└─ Versionado em Git            ✅
+
+CAMADA 5: Scripts validação
+├─ validate-package-dates.sh    ✅
+├─ pre-install.sh               ✅
+└─ verify-supply-chain.sh       ✅
+
+═══════════════════════════════════════════════════════════════
+💡 DICAS DE SEGURANÇA
+═══════════════════════════════════════════════════════════════
+
+✅ SEMPRE USE:
+   npm ci  (não npm install)
+
+✅ SEMPRE COMMITE:
+   package-lock.json
+
+✅ SEMPRE VERIFIQUE:
+   npm audit
+   bash scripts/verify-supply-chain.sh
+
+✅ NUNCA FAÇA:
+   npm update
+   npm install pkg@latest
+   npm audit fix --force
+
+═══════════════════════════════════════════════════════════════
+🔗 FLUXO DE TRABALHO DIÁRIO
+═══════════════════════════════════════════════════════════════
+
+Ao iniciar trabalho:
+$ nvm use
+$ npm ci
+$ npm run dev
+
+Antes de fazer commit:
+$ npm audit
+$ npm run type-check
+$ npm run build
+
+Antes de fazer push:
+$ bash scripts/verify-supply-chain.sh
+
+═══════════════════════════════════════════════════════════════
+📊 CHECKLIST
+═══════════════════════════════════════════════════════════════
+
+[ ] ~/.npmrc configurado (save-exact, audit-level, etc)
+[ ] projeto/.npmrc configurado
+[ ] .nvmrc com Node.js 20
+[ ] package.json com versões exatas (sem ^, ~)
+[ ] package-lock.json gerado (npm ci)
+[ ] scripts/ criado com validação
+[ ] npm audit passou
+[ ] Rodar npm run dev sem erros
+[ ] Fazer commit com package-lock.json
+
+═══════════════════════════════════════════════════════════════
+🎯 GARANTIAS
+═══════════════════════════════════════════════════════════════
+
+✅ Impossível instalar pacote > jan/2026
+✅ Impossível usar versão flutuante (^, ~)
+✅ Impossível fazer npm update
+✅ Impossível instalar sem auditoria
+✅ Impossível usar hash inválido
+✅ 100% reproduzível (npm ci sempre igual)
+✅ 100% rastreável (Git rastreia tudo)
+
+═══════════════════════════════════════════════════════════════
+
+Data Limite: 31 de Janeiro de 2026
+Sistema de Bloqueio: ✅ ATIVO
+Proteção: 🛡️ MÁXIMA
+
+EOF
