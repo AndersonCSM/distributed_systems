@@ -32,7 +32,7 @@ Projeto prático de arquitetura distribuída em nuvem AWS com separação de cam
 ┌──────────────────────────────────────────────────────────┐
 │                    AWS VPC                               │
 ├──────────────────────────────────────────────────────────┤
-│                                                           │
+│                                                          │
 │  ┌─────────────────────┐          ┌──────────────────┐   │
 │  │  Subnet Pública     │          │ Subnet Privada   │   │
 │  ├─────────────────────┤          ├──────────────────┤   │
@@ -44,9 +44,9 @@ Projeto prático de arquitetura distribuída em nuvem AWS com separação de cam
 │  │ - WooCommerce       │          └──────────────────┘   │
 │  │ - IP: Público       │                                 │
 │  └─────────────────────┘                                 │
-│         ▲                                                 │
+│         ▲                                                │
 │         │ HTTP:80, HTTPS:443                             │
-│         │                                                 │
+│         │                                                │
 │      Usuários / Admin                                    │
 └──────────────────────────────────────────────────────────┘
 ```
