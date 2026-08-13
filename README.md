@@ -2,11 +2,11 @@
 
 > A comprehensive repository showcasing practical exercises in distributed systems, cloud infrastructure, and modern web application development using AWS and contemporary technologies.
 
-## 📖 Description
+## Description
 
 This repository organizes practical activities from the Distributed Systems course into independent, self-contained projects. Each project demonstrates key concepts in cloud computing, distributed architectures, infrastructure provisioning, and full-stack web development.
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 ├── course/                          # Course projects directory
@@ -19,40 +19,41 @@ This repository organizes practical activities from the Distributed Systems cour
 │   ├── projeto_07/                  # Online Dominó - Full-stack
 │   ├── projeto_08/                  # Personal Portfolio
 │   └── README.md                    # Projects overview (English)
+├── .agent/                          # AI Agent environment and skills
 ├── docs/                            # General documentation
 ├── README.md                        # This file
 └── LICENSE
 ```
 
-## 🎓 Learning Outcomes
+## Learning Outcomes
 
 This repository demonstrates practical proficiency in:
 
-### 🏗️ Infrastructure & Cloud
+### Infrastructure & Cloud
 - AWS EC2, RDS, ECR, ECS, ALB, Amplify provisioning
 - Network configuration and security (Security Groups, VPC)
 - Infrastructure concepts and best practices
 - High availability and auto-scaling
 
-### 💻 Development
+### Development
 - Full-stack web application development
 - Frontend: React, TypeScript, Tailwind CSS, Vite
 - Backend: Node.js, Express, PHP
 - Real-time communication (WebSockets, Socket.io)
 
-### 📦 DevOps
+### DevOps
 - Docker containerization (single and multi-stage builds)
 - Container orchestration (ECS/Fargate)
 - CI/CD pipeline design
 - Application deployment workflows
 
-### 🔄 Architecture
+### Architecture
 - Distributed system design patterns
 - Microservices architecture
 - Database separation and scalability
 - Load balancing and horizontal scaling
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Browse Projects
 1. Start with [course/README.md](course/README.md) for complete project overview
@@ -75,7 +76,7 @@ This repository demonstrates practical proficiency in:
 | 07 | [Dominó Online](course/projeto_07/README.md) | Full-stack | Node.js, Socket.io, MongoDB |
 | 08 | [Portfolio](course/projeto_08/README.md) | Frontend | React, Amplify, AWS |
 
-## 💡 Technology Stack
+## Technology Stack
 
 ### Cloud Services
 - **AWS:** EC2, RDS, ECR, ECS, ALB, Amplify, CloudWatch
@@ -105,18 +106,18 @@ This repository demonstrates practical proficiency in:
 - Git, GitHub
 - npm, yarn package managers
 
-## 📚 Documentation Features
+## Documentation Features
 
 Every project includes:
-- ✅ **Clear objectives** - Defined learning goals
-- ✅ **Architecture diagrams** - Visual system design
-- ✅ **Step-by-step guides** - Implementation instructions
-- ✅ **Code examples** - Ready-to-use snippets
-- ✅ **Validation checklists** - Completion verification
-- ✅ **Troubleshooting** - Common issues and solutions
-- ✅ **Best practices** - Production-ready patterns
+- **Clear objectives** - Defined learning goals
+- **Architecture diagrams** - Visual system design
+- **Step-by-step guides** - Implementation instructions
+- **Code examples** - Ready-to-use snippets
+- **Validation checklists** - Completion verification
+- **Troubleshooting** - Common issues and solutions
+- **Best practices** - Production-ready patterns
 
-## 📋 Key Concepts Covered
+## Key Concepts Covered
 
 ### Project 01: Infrastructure Basics
 - EC2 instance provisioning and management
@@ -160,14 +161,26 @@ Every project includes:
 - CI/CD automation with AWS Amplify
 - Cloud hosting and domain management
 
-## ⚠️ Important Notes
+## AI Agent Environment
+
+This repository utilizes an integrated AI agent environment (located in the `.agent/` directory) containing configurations, documentation, and specialized skills to optimize repository features and development workflows.
+
+### Core Agent Skills
+- **Code Analysis & Refactoring**: Optimizing scripts, removing redundancies, and applying Clean Code practices.
+- **Documentation**: Automatically maintaining comprehensive documentation and keeping READMEs up to date.
+- **Task Automation**: Proposing and developing scripts for builds, automated testing, and deployments.
+- **Debugging**: Analyzing execution logs, tracing function calls, and proposing definitive solutions to issues.
+
+For further configuration details, refer to the [Agent Index](.agent/index.md) and [Agent Skills](.agent/skills/skills.md) documentation.
+
+## Important Notes
 
 - **Network Security:** Always validate firewall rules (ports 22, 80, 443, 3306 when applicable) before external testing
 - **AWS Costs:** Monitor resource usage to avoid unexpected charges from AWS Academy
 - **Best Practices:** Production deployments require HTTPS, strong authentication, and data encryption
 - **Documentation:** Each project includes comprehensive setup guides—start with each project's README
 
-## 🔍 Navigation Guide
+## Navigation Guide
 
 ```
 1. Read this file (repository overview)
@@ -183,7 +196,7 @@ Every project includes:
 6. Validate with provided checklist
 ```
 
-## 📞 Support & Resources
+## Support & Resources
 
 - **Project Documentation:** Each project's README contains detailed guides
 - **AWS Documentation:** https://docs.aws.amazon.com
@@ -191,14 +204,14 @@ Every project includes:
 - **Docker Documentation:** https://docs.docker.com
 - **Node.js Documentation:** https://nodejs.org/docs/
 
-## 👤 Author Information
+## Author Information
 
 **Anderson Carlos da Silva Morais**
 - Student ID: 2024011327
 - Course: Distributed Systems
 - University: UFERSA (Universidade Federal Rural do Semi-Árido)
 
-## 📄 License
+## License
 
 This project is provided as educational material. See [LICENSE](LICENSE) file for details.
 
