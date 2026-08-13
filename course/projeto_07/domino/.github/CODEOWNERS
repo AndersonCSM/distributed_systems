@@ -1,0 +1,40 @@
+# Configuração do Repositório
+.github/ @anderson-carlos
+.gitignore @anderson-carlos
+docker-compose.yml @anderson-carlos
+Dockerfile.prod @anderson-carlos
+package.json @anderson-carlos
+
+# Backend - Lógica do Jogo
+/packages/server/src/services/ @anderson-carlos
+/packages/server/src/types/ @anderson-carlos
+/packages/server/src/handlers/ @anderson-carlos
+
+# Backend - Setup & Config
+/packages/server/Dockerfile @anderson-carlos
+/packages/server/package.json @anderson-carlos
+/packages/server/tsconfig.json @anderson-carlos
+
+# Frontend - Pages (Telas)
+/packages/client/src/pages/ @anderson-carlos
+
+# Frontend - Components
+/packages/client/src/components/ @anderson-carlos
+
+# Frontend - Lógica
+/packages/client/src/services/ @anderson-carlos
+/packages/client/src/hooks/ @anderson-carlos
+/packages/client/src/types/ @anderson-carlos
+
+# Frontend - Setup & Config
+/packages/client/Dockerfile @anderson-carlos
+/packages/client/package.json @anderson-carlos
+/packages/client/tsconfig.json @anderson-carlos
+/packages/client/vite.config.ts @anderson-carlos
+
+# Documentação
+/docs/ @anderson-carlos
+README.md @anderson-carlos
+
+# Todos PRs precisam ser revisadas por:
+* @anderson-carlos

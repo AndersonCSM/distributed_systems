@@ -1,0 +1,19 @@
+{
+  "name": "domino-online",
+  "version": "0.1.0",
+  "description": "Jogo de Dominó Online com suporte para 2-4 jogadores",
+  "private": true,
+  "workspaces": [
+    "packages/server",
+    "packages/client"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspaces",
+    "build": "npm run build --workspaces",
+    "type-check": "npm run type-check --workspaces",
+    "start": "npm run start -w server"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.0"
+  }
+}

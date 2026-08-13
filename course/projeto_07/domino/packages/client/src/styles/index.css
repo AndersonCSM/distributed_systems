@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #1c1410;
+    color: #f5f0e1;
+  }
+
+  #root {
+    width: 100%;
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 rounded-lg font-semibold text-wood-900 
+           bg-amber-400 hover:bg-amber-300 
+           transition-all duration-200 ease-out
+           shadow-lg hover:shadow-xl hover:-translate-y-0.5
+           active:translate-y-0 active:shadow-md
+           disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 rounded-lg font-semibold text-ivory-100
+           bg-wood-600 hover:bg-wood-500
+           border border-wood-400/30
+           transition-all duration-200 ease-out
+           hover:-translate-y-0.5
+           active:translate-y-0;
+  }
+
+  .btn-danger {
+    @apply px-6 py-3 rounded-lg font-semibold text-white
+           bg-red-600 hover:bg-red-500
+           transition-all duration-200 ease-out;
+  }
+
+  .card {
+    @apply bg-wood-700/80 backdrop-blur-sm rounded-2xl 
+           border border-wood-500/20 shadow-2xl
+           p-6;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 rounded-lg
+           bg-wood-800/60 border border-wood-500/30
+           text-ivory-100 placeholder-ivory-100/40
+           focus:outline-none focus:ring-2 focus:ring-amber-400/50 focus:border-amber-400/50
+           transition-all duration-200;
+  }
+
+  .select-field {
+    @apply w-full px-4 py-3 rounded-lg appearance-none
+           bg-wood-800/60 border border-wood-500/30
+           text-ivory-100
+           focus:outline-none focus:ring-2 focus:ring-amber-400/50 focus:border-amber-400/50
+           transition-all duration-200;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-ivory-100/70 mb-1.5;
+  }
+
+  .felt-surface {
+    @apply bg-felt-600 rounded-2xl border-4 border-wood-600/60
+           shadow-inner;
+  }
+}
